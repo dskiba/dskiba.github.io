@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header__cell">
+			<header>
+				<div class="header__phone">
+					<a href="tel:2158863588">
+						<span>215 886-3588</span>
+					</a>
+				</div>
+			</header>
+		</div>
+		<div id="content__cell">
+			<div class="columns">	
+				<div class="column__left">
+					<div class="column__left-data">
+						<div class="logo__wrapper">
+							<a href="index.html"><div class="logo"></div></a>
+							<p class="pre">Low Office of</p>
+							<p class="name">Barry S. Yaches, P.C.</p>
+						</div>
+						<nav id="menu__main" class="menu__left">
+							<ul>
+								<li><a href="pages/firm_profile/firm_profile.html">Firm Profile</a></li>
+								<li><a href="pages/practice_areas/practice_areas.html">Particle Areas</a></li>
+								<li><a href="pages/articles/articles.html">Legal News</a></li>
+								<li><a href="pages/contacts/contacts.html">Contacts</a></li>					
+							</ul>
+						</nav>
+						<button id="go" type="button" class="btn" >Contact Us</button>
+					</div>
+				</div>
+				<div class="column__right">
+					<div class="gradient-header imaged-block">
+						<div class="column__right-data">
+							<div class="inner">
+								<h1 class="title-h1">
+									Trust, Experience <br> and Personal Attention
+									</h1>
+										<div class="text text-styles">
+											<p>Representing clients in complex personal injury and commercial cases for more than 40 years. Mr. Yaches aims to represent clients aggressively while maintaining close communication at all times. Our foremost goal is to provide exceptional personalized service to every client.</p>
+										</div>
+										<a href="pages/firm_profile/firm_profile.html" class="view-more">About Us</a>
+										<img class="image" src="img/002.png" alt="hammer">
+									</div>
+								</div>
+							</div>
+							<div class="particle-block block">
+								<div class="column__right-data">
+									<h2 class="title-h2">Particle Areas</h2>
+									<ul class="list">
+										<li>Personal Injury</li>
+										<li>Medical Malpractice</li>
+										<li>Nursing Home Abuse</li>
+										<li>Auto Accidents</li>
+										<li>Wrongful Death</li>
+										<li>Commercial Litigation</li>
+										<li>Insurance Litigation</li>
+										<li>Real Estate Law and Litigation</li>
+									</ul>
+									<a href="pages/practice_areas/practice_areas.html" class="view-more">Learn More</a>
+								</div>
+							</div>
+							<div class="articles-block bg-block block">
+								<div class="column__right-data">
+									<h2 class="title title-h2">The Latest Article</h2>
+									<div class="article">
+										— Disciplinary actions against substandard medical practioners lacking in Pennsylvania
+									</div>
+									<a href="pages/article/article.html" class="view-more">View all Articles</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="footer__wrapper">
+					<div id="footer__cell">
+						<footer>
+							<div class="flex">
+								<div class="copyright">
+									Law Office of Barry S. Yaches, P.C. © 2016<br/>
+									400 Greenwood Avenue Wyncote, PA 19095<br/>
+									Byaches@yacheslaw.com
+								</div>
+								<div class="menu__box">
+									<nav id="footer__menu">
+										<ul>
+											<li><a href="pages/firm_profile/firm_profile.html">Firm Profile </a></li>
+											<li><a href="pages/practice_areas/practice_areas.html">PracticeAreas</a></li>
+											<li><a href="pages/articles/articles.html">Legal News</a></li>
+											<li><a href="pages/contacts/contacts.html">Contacts</a></li>
+										</ul>
+									</nav>
+								</div>
+								<div class="right__box">
+									<a href="tel:2158863588">215-886-3588</a><br/><br/>
+									<a href="#">Web Sollutions — Direct Line Development</a><br/>
+								</div>
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
+
+
+<!-- begin modal window -->
+<div id="modal_form" style="display: none; top: 45%; opacity: 0;">
+	<span id="modal_close">x</span>
+		<form action="" method="post">
+			<h3 class="modal-h">Contact Us</h3>
+
+			<div class="modal-n">Name*</div>
+				<input type="text" name="your-name" value="" size="">
+
+			<div class="modal-n">Phone*</div>
+				<input type="text" name="your-phone" value="" size="40" class="input__phone">
+
+			<div class="modal-n">Choose a service you’re interested in:</div>
+            <select name="cars">
+              <option value="front-end">Front-end</option>
+              <option value="back-end">Back-end</option>
+              <option value="python">Pyhton</option>
+              <option value="jquery">jQuery</option>
+            </select>
+            <div class="modal-n">Briefly describe what you wish to discuss with Mr. Yaches.</div>
+            <textarea id="msg" name="user_message"></textarea>
+
+			<p style="text-align: center; padding-bottom: 10px;">
+				<input type="submit" value="Send">
+			</p>
+		</form>
+</div>
+<div id="overlay" style="display: none;"></div>
+<!-- end modal window -->
+
+
+<script>
+$(document).ready(function() { 
+	$('button#go').click( function(event){ // лoвим клик пo ссылки с id="go"
+		event.preventDefault(); // выключaем стaндaртную рoль элементa
+		$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+		 	function(){ // пoсле выпoлнения предъидущей aнимaции
+				$('#modal_form') 
+					.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+					.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+		});
+	});
+	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+	$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+		$('#modal_form')
+			.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+				function(){ // пoсле aнимaции
+					$(this).css('display', 'none'); // делaем ему display: none;
+					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+				}
+			);
+	});
+});
+</script>
+
+</body>
+</html>

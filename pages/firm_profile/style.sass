@@ -1,0 +1,334 @@
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, footer
+  margin: 0
+  border: 0
+  outline: 0
+  font: inherit
+
+body
+  overflow-x: hidden
+  color: #232323
+  line-height: 1
+  font-family: 'Lato',sans-serif
+
+ol, ul
+  list-style: none
+
+a
+  color: inherit
+  text-decoration: none
+
+#wrapper
+  overflow: hidden
+  display: table
+  width: 100%
+  height: 100%
+  table-layout: fixed
+
+/* START HEADER */
+
+#header__cell > header
+  padding-right: 100px
+  padding-left: 100px
+  padding-top: 60px
+  position: absolute
+  top: 0
+  left: 50%
+  width: 100%
+  max-width: 1800px
+  z-index: 11
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-transform: translateX(-50%)
+  -moz-transform: translateX(-50%)
+  -ms-transform: translateX(-50%)
+  -o-transform: translateX(-50%)
+  transform: translateX(-50%)
+  .header__phone a
+    font-size: 23px
+    font-weight: 900
+    text-align: right
+    color: #232323
+    &:before
+      content: ''
+      display: inline-block
+      width: 26px
+      height: 26px
+      vertical-align: middle
+      background: url(img/sprite.svg) no-repeat 0 -40px
+
+#header-wrapper
+  display: table-row
+  height: 0
+
+#header__cell > header .header__phone
+  text-align: right
+  -webkit-box-flex: 1
+  -moz-box-flex: 1 0 .1px
+  -webkit-flex: 1 0 .1px
+  -ms-flex: 1 0 .1px
+  flex: 1 0 .1px
+
+/* END HEADER */
+
+.logo
+  width: 80px
+  height: 38px
+  background: url(img/sprite.svg) no-repeat 0 0
+
+.logo-wrapper
+  display: block
+  color: #fff
+
+.pre
+  margin-top: 18px
+  font-size: 18px
+  font-weight: normal
+  line-height: 1.56
+  letter-spacing: normal
+  color: #fff
+
+.name
+  width: 242px
+  height: 56px
+  font-family: Lora
+  font-size: 26px
+  font-weight: bold
+  line-height: 1.08
+  letter-spacing: -0.3px
+  color: #ffffff
+
+.btn
+  border: none
+  position: relative
+  font-size: 22px
+  font-weight: bold
+  text-align: center
+  color: #2a2e7e
+  width: 200px
+  height: 55px
+  background-color: #ffffff
+  &:hover
+    background-color: #ffffff
+    opacity: 0.5
+
+.menu__left
+  margin: 40px -32px
+  li a
+    padding: 10px 20px
+    font-size: 20px
+    line-height: 3.1
+    color: #ffffff
+    &:hover
+      background-color: #fff
+      color: #2a2e7e
+
+/* MAIN */
+
+.columns
+  min-height: 100%
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  .column__left
+    max-width: calc(50% - 510px)
+    min-width: 390px
+    position: relative
+    z-index: 20
+    background: url(img/001.jpg) top left
+    -webkit-box-flex: 1
+    -moz-box-flex: 1 0 .1px
+    -webkit-flex: 1 0 .1px
+    -ms-flex: 1 0 .1px
+    flex: 1 0 .1px
+    background-size: cover
+
+.column__left-data
+  margin-left: auto
+  margin-top: 70px
+  padding-right: 50px
+  width: 240px
+
+.columns .column__right
+  position: relative
+  z-index: 2
+  -webkit-box-flex: 1
+  -moz-box-flex: 1 0 .1px
+  -webkit-flex: 1 0 .1px
+  -ms-flex: 1 0 .1px
+  flex: 1 0 .1px
+
+.gradient-header
+  padding-bottom: 100px
+  padding-top: 50px
+  background-image: -webkit-linear-gradient(bottom, #5ebba9, #fff)
+  background-image: linear-gradient(to top, #5ebba9, #fff)
+
+.imaged-block
+  .inner
+    position: relative
+  .image
+    bottom: -100px
+    position: absolute
+    right: 0
+    min-width: 300px
+    max-width: 50%
+    z-index: 2
+    transform: translateY(50%)
+    -webkit-box-flex: 1
+    -moz-box-flex: 1 0 .1px
+    -webkit-flex: 1 0 .1px
+    -ms-flex: 1 0 .1px
+    flex: 1 0 1px
+
+.title-h1
+  font-size: 55px
+  font-weight: 900
+  line-height: 1.15
+  color: #2a2e7e
+  padding-bottom: 20px
+
+.text-styles
+  font-size: 18px
+  line-height: 1.67
+  color: #232323
+
+.view-more
+  display: inline-block
+  padding-top: 2px
+  margin-top: 40px
+  font-size: 18px
+  font-weight: bold
+  color: #2a2e7e
+  &:after
+    content: ''
+    display: inline-block
+    margin-top: .24em
+    margin-left: 8px
+    vertical-align: top
+    border: 5px solid transparent
+    border-left: 5px solid #2a2e7e
+
+.block
+  padding-bottom: 100px
+  padding-top: 100px
+
+.bg-block
+  position: relative
+  background: url(img/003.jpg) no-repeat
+  background-size: cover
+
+.title-h2
+  font-size: 30px
+  font-weight: 900
+  color: #2a2e7e
+
+.list
+  margin-top: 30px
+  -webkit-perspective: 1px
+  -webkit-column-count: 3
+  -moz-column-count: 3
+  column-count: 3
+  li
+    position: relative
+    padding-left: 1em
+    padding-bottom: 10px
+    color: #2a2e7e
+    font-weight: 800
+    font-size: 20px
+    font-size: 1.25rem
+    line-height: 1.4
+    &:before
+      content: '•'
+      position: absolute
+      left: 0
+      top: -.08em
+
+.bg-block .column__right-data
+  position: relative
+  z-index: 2
+
+.column__right-data
+  max-width: 1410px
+  padding-left: 100px
+  padding-right: 100px
+  margin-right: auto
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.bg-block .title
+  color: #fff
+
+.title-h2
+  font-size: 30px
+  font-weight: 900
+  color: #2a2e7e
+
+.articles-block
+  .article
+    margin-top: 30px
+    font-size: 18px
+    font-weight: bold
+    color: #ffffff
+  .view-more
+    color: #fff
+    &:after
+      border-left: 5px solid #ffffff
+
+/*  END MAIN */
+
+/* START FOOTER */
+
+#footer__wrapper
+  display: table-row
+  height: 0
+
+#footer__cell > footer
+  padding-top: 50px
+  padding-bottom: 50px
+  color: #fff
+  font-weight: bold
+  background-color: #2a2e7e
+  font-size: 16px
+  font-weight: normal
+  color: #ffffff
+  line-height: 1.5625
+  .flex
+    margin: 0 auto
+    max-width: 1800px
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    padding-right: 100px
+    padding-left: 100px
+  .menu__box
+    -webkit-box-flex: 1
+    -moz-box-flex: 1 1 .1px
+    -webkit-flex: 1 1 .1px
+    -ms-flex: 1 1 .1px
+    flex: 1 1 .1px
+  .right__box
+    text-align: right
+
+#footer__menu
+  margin-top: -17px
+  padding-left: 40px
+  padding-right: 24px
+  text-align: center
+  ul
+    display: inline-block
+    text-align: left
+  li
+    display: inline-block
+    margin-right: 30px
+    margin-bottom: 1px
+
+/* END FOOTER */
